@@ -1,0 +1,37 @@
+
+
+
+
+
+
+<table class="table" border="2">
+    <thead>
+        <tr>
+            <th>createdAt</th>
+            <th>account_name</th>
+            <th>available_balance</th>
+            <th>account_number</th>
+            <th>currency</th>
+            <th>user_image</th>
+            <th>id</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td>{{ account.createdAt }}</td>
+            <td>{{ account.account_name }}</td>
+            <td>{{ account.available_balance }}</td>
+            <td>{{ account.account_number }}</td>
+            <td>{{ account.currency }}</td>
+            <td> <img src="{{ account.user_image }}" width="30%" height="15%"></td>
+            <td>{{ account.id }}</td>
+           
+            
+        </tr>
+    </tbody>
+</table>
+
+
+
+

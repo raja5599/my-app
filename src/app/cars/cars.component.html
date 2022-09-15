@@ -1,0 +1,26 @@
+<label>select car:</label>
+    <input type="radio" name="cars" value="honda"[(ngModel)]="cars">
+   <label>Honda</label>
+   <input type="radio" name="cars" value="Bmw"[(ngModel)]="cars">
+   <label>Mmw</label>
+   <input type="radio" name="cars" value="Audi"[(ngModel)]="cars">
+   <label>Audi</label>
+   
+
+ <br>
+ <br>
+ <div>
+
+     <div class="A">
+      <img *ngIf="cars=='honda'" src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Honda/City/6909/1645419537509/front-left-side-47.jpg" alt="">
+     </div>
+     <div class="B">
+        <img *ngIf="cars=='Bmw'" src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Ym13JTIwY2FyfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="">
+     </div>
+     <div class="C">
+        <img *ngIf="cars=='Audi'" src="https://cars.usnews.com/static/images/Auto/izmo/i31351528/2017_audi_r8_angularfront.jpg" alt="">
+     </div> 
+      
+</div>
+
+<marquee>{{ message }}</marquee>

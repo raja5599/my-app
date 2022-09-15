@@ -1,0 +1,56 @@
+
+<input type="text"[(ngModel)]="filterTerm">
+<button (click)="filter()" class="btn btn-primary">filter</button>
+
+<select [(ngModel)]="column">
+    <option>vehicle</option>
+    <option>manufacturer</option>
+    <option>model</option>
+    <option>type</option>
+    <option>fuel</option>
+    <option>color</option>
+    <option>id</option>
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">sort</button>
+
+<table class="table" border="2">
+    <thead>
+        <tr>
+           <th>vehicle</th>
+            <th>color</th>
+            <th>manufacturer</th>
+            <th>type</th>
+            <th>model</th>
+            <th>fuel</th>
+             <th>id</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+        <td>{{ vehicle.Vehicle }}</td>
+        <td>{{ vehicle.color }}</td>
+        <td>{{ vehicle.manufacturer }}</td>
+        <td>{{ vehicle.type }}</td>
+        <td>{{ vehicle.model }}</td>
+        <td>{{ vehicle.fuel }}</td>
+        <td>{{ vehicle.id }}</td>
+        <td><button class="btn btn-danger" (click)="delete(vehicle.id)">delete</button></td>
+       
+        </tr>
+        
+    </tbody>
+</table>
+
+
+<ul class="pagination">
+  
+  <li class="page-item"(click)="page(1)"><a class="page-link" >1</a></li>
+  <li class="page-item"(click)="page(2)"><a class="page-link" >2</a></li>
+  <li class="page-item"(click)="page(3)"><a class="page-link" >3</a></li>
+ 
+</ul>

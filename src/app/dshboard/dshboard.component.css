@@ -1,0 +1,35 @@
+
+   .parent{ height: 140vh; 
+    width: 100vw;
+    display: flex;
+     background-color: gray;
+   
+    };
+   
+    .child1{
+        height: 140%;
+        width: 20%;
+        
+    }
+    h3{
+        display: flex;
+        justify-content: center;
+    }
+    h4{
+        display: flex;
+        justify-content: center;
+        font-size: large;
+        
+
+    }
+    .logout{
+        display: flex;
+        justify-content: center;
+    }
+    .child2{
+      overflow: auto;
+      height: 100%;
+      width: 80%;
+       background-color: aqua
+    }
+    

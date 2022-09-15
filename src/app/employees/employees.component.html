@@ -1,0 +1,48 @@
+<h1>employees</h1>
+
+<label>name of employee</label>
+<input type="text" [(ngModel)]="name">
+<br>
+<label> employee age</label>
+<input type="date" [(ngModel)]="age">
+<br>
+<label>company name</label>
+<input type="text" [(ngModel)]="company">
+<br>
+<label>package</label>
+<input type="number" [(ngModel)]="package">
+<br>
+<br>
+<button class="btn btn-primary"(click)="add()">register</button>
+<br>
+<br><br><br>
+<button (click)="PackageLowtoHigh()">package low to high</button>
+<button (click)="PackageHightoLow()">package high to low</button>
+<button (click)="deleteAll()">deleteAll</button>
+<button (click)="clear()">clear</button>
+
+
+<table class="table table-hover" border="2">
+    <thead >
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>company</th>
+            <th>package</th>
+            <button (click)="deleteAll()">deleteAll</button>
+        </tr>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees,let i =index">
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.age |age  }}</td>
+            <td>{{ employee.company }}</td>
+            <td [ngStyle]="{ 'color':employee.package>10000 ? 'red' : 'green' }">{{ employee.package | price }}</td>
+            <td [ngClass]="{ 'bred':employee.package>10000,  'bgreen' : employee.package<10000}">{{ employee.package | price }}</td>
+
+            <td><button (click)="delete(i)">delete</button></td>
+
+        </tr>
+    </tbody>
+</table>

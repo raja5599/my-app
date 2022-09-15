@@ -1,0 +1,26 @@
+<div class="row">
+    <div id="box" class="col-md-3 col-sm-2" *ngFor="let client of clients">
+        <label style="margin-right: 90px;">name: {{ client.name }}</label>
+        <p><b>ID:</b> {{ client.id }}</p>
+        <p><b>username:</b> {{ client.username }}</p>
+        <hr />
+        <p>Emali: {{ client.email }}</p>
+        <p>
+          street: {{ client.address.street }},
+          suite: {{ client.address.suite }},
+           city: {{ client.address.city }},
+           zipcode: {{ client.address.zipcode }},
+        </p>
+        <p>
+           Location:lat: {{ client.address.geo.lat }},
+           lan: {{ client.address.geo.lng }},
+        </p>   
+         <hr />
+        <p>name: {{ client.company.name }}</p>
+        <p>catchphrase: {{ client.company.catchphrase }}</p>
+        <p>Bs: {{ client.company.bs }}</p>
+        <hr />
+         <p>phone: {{ client.phone }}</p>
+        <p>website: {{ client.website }}</p>
+    </div>
+</div>
