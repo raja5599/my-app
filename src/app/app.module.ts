@@ -30,6 +30,13 @@ import { MailComponent } from './mail/mail.component';
 import { ClientComponent } from './client/client.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { StarComponent } from './star/star.component';
+import { ProductComponent } from './product/product.component';
+import { NavComponent } from './nav/nav.component';
+import { CartlistComponent } from './cartlist/cartlist.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +65,13 @@ import { CreateUserComponent } from './create-user/create-user.component';
     ClientComponent,
     CreatevehicleComponent,
     CreateUserComponent,
+    ParentComponent,
+    ChildComponent,
+    StarComponent,
+    ProductComponent,
+    NavComponent,
+    CartlistComponent,
+    VehicleDetailsComponent,
   ],
   imports: [
     BrowserModule,

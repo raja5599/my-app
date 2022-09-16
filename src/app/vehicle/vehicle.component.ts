@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Vehicle } from '../vehicle';
 import { VehicleService } from '../vehicle.service';
 
@@ -8,6 +9,7 @@ import { VehicleService } from '../vehicle.service';
   styleUrls: ['./vehicle.component.css'],
 })
 export class VehicleComponent implements OnInit {
+
   public filterTerm: string = '';
 
   public column: string = '';
@@ -15,7 +17,7 @@ export class VehicleComponent implements OnInit {
 
   public vehicles: Vehicle[] = [];
 
-  constructor(private _Vehicleservice: VehicleService) {
+  constructor(private _Vehicleservice: VehicleService,private router:Router) {
     this._Vehicleservice.getVehicles().subscribe(
       (data: any) => {
         this.vehicles = data;
@@ -70,5 +72,9 @@ export class VehicleComponent implements OnInit {
         alert('internal server error');
       }
     );
+  }
+
+  view(id:string){
+     this.router.navigateByUrl('/dashboard/vehicle-details' + '/' + id);
   }
 }

@@ -5,6 +5,8 @@ import { AuthGuard } from './auth.guard';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CarsComponent } from './cars/cars.component';
 import { CartComponent } from './cart/cart.component';
+import { CartlistComponent } from './cartlist/cartlist.component';
+import { ChildComponent } from './child/child.component';
 import { ClientComponent } from './client/client.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
@@ -17,12 +19,17 @@ import { GpayComponent } from './gpay/gpay.component';
 import { ItemsComponent } from './items/items.component';
 import { LoginComponent } from './login/login.component';
 import { MailComponent } from './mail/mail.component';
+import { NavComponent } from './nav/nav.component';
 import { NotifyGuard } from './notify.guard';
+import { ParentComponent } from './parent/parent.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ProductComponent } from './product/product.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { SquareComponent } from './square/square.component';
+import { StarComponent } from './star/star.component';
 import { StudentRegistrationComponent } from './student-registration/student-registration.component';
 import { TwowaybindingComponent } from './twowaybinding/twowaybinding.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
@@ -50,12 +57,19 @@ const routes: Routes = [
       { path: 'items', component: ItemsComponent },
       { path: 'mail', component: MailComponent },
       { path: 'client', component: ClientComponent },
+      {path:'child',component:ChildComponent},
+      {path:'star',component:StarComponent},
+      {path:'product',component:ProductComponent},
+      {path:'nav',component:NavComponent},
+      {path:'cartlist',component:CartlistComponent},
+      {path:'vehicle-details/:id',component:VehicleDetailsComponent},
       {
         path: 'createvehicle',
         component: CreatevehicleComponent,
         canDeactivate: [NotifyGuard],
       },
       { path: 'create-user', component: CreateUserComponent },
+      {path:'parent',component:ParentComponent},
     ],
   },
 ];

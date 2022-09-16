@@ -1,5 +1,5 @@
 
-   .parent{ height: 140vh; 
+   .parent{ height: 200vh; 
     width: 100vw;
     display: flex;
      background-color: gray;
@@ -28,7 +28,7 @@
     }
     .child2{
       overflow: auto;
-      height: 100%;
+      height: 120%;
       width: 80%;
        background-color: aqua
     }
