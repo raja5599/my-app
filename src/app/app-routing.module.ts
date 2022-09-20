@@ -57,19 +57,25 @@ const routes: Routes = [
       { path: 'items', component: ItemsComponent },
       { path: 'mail', component: MailComponent },
       { path: 'client', component: ClientComponent },
-      {path:'child',component:ChildComponent},
-      {path:'star',component:StarComponent},
-      {path:'product',component:ProductComponent},
-      {path:'nav',component:NavComponent},
-      {path:'cartlist',component:CartlistComponent},
-      {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+      { path: 'child', component: ChildComponent },
+      { path: 'star', component: StarComponent },
+      { path: 'product', component: ProductComponent },
+      { path: 'nav', component: NavComponent },
+      { path: 'cartlist', component: CartlistComponent },
+      { path: 'vehicle-details/:id', component: VehicleDetailsComponent },
+      { path: 'edit-vehicle/:id', component: CreatevehicleComponent },
+
+      {path:'payment',
+          loadChildren: () => import('./payment/payment.module').then(m => m.PaymentModule)
+      },
+      
       {
         path: 'createvehicle',
         component: CreatevehicleComponent,
         canDeactivate: [NotifyGuard],
       },
       { path: 'create-user', component: CreateUserComponent },
-      {path:'parent',component:ParentComponent},
+      { path: 'parent', component: ParentComponent },
     ],
   },
 ];

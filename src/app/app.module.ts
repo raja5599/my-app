@@ -37,6 +37,7 @@ import { ProductComponent } from './product/product.component';
 import { NavComponent } from './nav/nav.component';
 import { CartlistComponent } from './cartlist/cartlist.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { AboutUsModule } from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
